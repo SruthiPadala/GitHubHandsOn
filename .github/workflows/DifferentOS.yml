@@ -1,0 +1,15 @@
+name: Different OS
+ 
+on:  push
+ 
+jobs:
+  runs-on-ubuntu-machine:
+   runs-on: ubuntu-latest
+   steps:
+      - run: echo "Its running on $RUNNER_OS"
+  runs-on-window:
+    runs-on: windows-latest
+    steps:
+      - name: shell
+        shell: bash
+        run: echo "Its running on $RUNNER_OS"
